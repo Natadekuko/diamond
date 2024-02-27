@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="profile-in.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Profile Tabs</title>
+<style>
+   #b1 {
+            transition: opacity 0.5s ease-in-out; 
+        }
+</style>
+</head>
+<body>
+    
+    <center>
+    <table>
+        <tr>
+            <td><button class="abtn" onclick="changeImage1()"><img src="mil.jpeg" id="b1"> <br> Amugauan</a></td>
+        </tr>
+    </table>
+    </center>
+    <script>
+        function changeImage1() {
+            var img = document.getElementById('b1');
+            img.style.opacity = '0'; 
+            setTimeout(function() {
+                img.src = 'ab1.png';
+                img.style.opacity = '1'; 
+            }, 500); 
+        }
+    </script>
+    </body>

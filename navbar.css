@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2f52a3, #98bade);
+
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#diamond {
+    z-index: 1;
+}
+
+#text {
+    position: relative;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+#btn {
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+    cursor: url('cursor-legit.png'), auto;
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #728FCE;
+    font-size: larger;
+    color: #fff;
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 2em;
+    color: rgb(241, 246, 193);
+    pointer-events: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(233, 255, 190);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    cursor: url('cursor-legit.png'), auto;
+
+}
+
+a.navigation a:hover,
+.navigation .navigation a.active {
+    background: lightcyan;
+    color: #fff
+}
+
+.paarallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding-right: 2.5vw;
+}
+
+.button {
+    position: relative;
+    padding: 10px 22px;
+    background: #00000000;
+    border-radius: 6px;
+    color: darkgoldenrod;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: rgb(115, 218, 218);
+    color: black;
+}
+
+button:active {
+    transform: scale(.96);
+}
+
+.button::before,
+.button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    border: 2px solid rgba(255, 0, 0, 0);
+    background-repeat: no-repeat;
+}
+
+.button.animate::before {
+    top: -70%;
+    background-image: radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, rgb(115, 218, 218) 20%, transparent 30%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, rgb(115, 218, 218) 15%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 20%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    animation: topBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes topBubbles {
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.button.animate::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, rgb(115, 218, 218) 15%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%),
+        radial-gradient(circle, rgb(115, 218, 218) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+    animation: bottomBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes bottomBubbles {
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+    background-color: #fff56a;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.dropdown ul li {
+    padding: 10px;
+}
+
+.dropdown ul li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown ul li a:hover {
+    background-color: #fffbdc;
+}
+
+#jian {
+    max-width: 150px;
+    max-height: 150px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Go!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="cursor.css">
+    
+
+    <style>
+        body{
+            cursor: url('cursor-legit.png'), auto;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="header">
+        <h2 class="logo"><img src="HCPSMSHS’s 8-Diamond.png" alt="png" id="jian"></h2>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" class="active button dropdown">Home</a></li>
+                <li><a href="profiles.html" class="button">Profiles</a></li>
+                <li><a href="hof.html" class="button">Hall of Fame</a></li>
+                <li class="dropdown">
+                    <a href="games.html" class="button">Games</a>
+                    <ul>
+                        <li><a href="Guess that diamond.html">Guess that Diamond</a></li>
+                        <li><a href="dmg.html">Diamond Memory Game</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+<section>
+    <img src="stars.png" id="stars">
+    <h2 id="text">Diamond</h2>
+    <a href="#sec" id="btn">Go!</a>
+    <img src="diamond.png" id="diamond"> 
+   
+     
+    
+
+</section>
+<div class="sec" id="sec">
+    <h2>8-Diamond</h2>
+    <img src="diapic.jpg" height="800 px" width="1300px">
+</div>
+   
+<footer class="footer">
+    <div class="fcontainer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Jian and Nathan</h4>
+                <ul>
+                    <li> <a href="aboutus.html">About us</a></li>
+                    <li> <a href="os.html">Our Services</a></li>
+                    <li> <a href="pp.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li> <a href="ci.html">Contact Info</a></li>
+                    <li> <a href="ea.html">Email Adress</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Sources</h4>
+                <ul>
+                    <li> <a href="https://www.facebook.com/seanmaurice.sanopo">Games</a></li>
+                    <li> <a href="https://www.youtube.com/watch?v=kmM6mqvnxcs">Parallax</a></li>
+                    <li> <a href="https://www.youtube.com/watch?v=YOb67OKw62s">Footer</a></li>
+                    <li> <a href="https://www.youtube.com/watch?v=F7iFnhSZe7o">Buttons</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow us</h4>
+                <div class="social-links">
+                    <p style="color: #fff;">Jian</p>
+                    <a href="https://www.facebook.com/juristanne.deleon.16?mibextid=kFxxJD"><i class="fab fa-facebook-f"></i></a>
+                    <a href="none.html"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/anngeljian/?igsh=Z3JxMDJoYTJrZ2oz&utm_source=qr&fbclid=IwAR0UfBvS2qBAVODZPgBdnJa-01xqU92QdY3qiqzAq1HVw2XGRcPSa7X128E"><i class="fab fa-instagram"></i></a>
+                    <a href="none.html"><i class="fab fa-linkedin-in"></i></a>
+
+                    <p style="color: #fff;">Nathan</p>
+                    <a href="https://www.facebook.com/nathan.jimenezparungao"><i class="fab fa-facebook-f"></i></a>
+                    <a href="none.html"><i class="fab fa-twitter"></i></a>
+                    <a href="none.html"><i class="fab fa-instagram"></i></a>
+                    <a href="none.html"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let stars = document.getElementById('stars');
+    let diamond = document.getElementById('diamond');
+    let btn = document.getElementById('btn');
+    let text = document.getElementById('text');
+
+    window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value + 0.25 + 'px';
+   
+    text.style.marginRight = value + 4 + 'px';
+    }) 
+
+    const buttons = document.querySelectorAll(".button");
+
+for (let button of buttons) {
+    console.log('reached');
+    button.addEventListener("click", e => {
+        e.preventDefault();
+        button.classList.add("animate");
+
+        setTimeout(() => {
+            button.classList.remove("animate");
+            window.location.href = button.getAttribute("href");
+        }, 600);
+    });
+}
+        ;</script>
+</body>
+
+</html>

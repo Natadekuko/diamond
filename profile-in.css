@@ -1,0 +1,26 @@
+body {
+    cursor: url('cursor-legit.png'), auto;
+}
+
+img {
+    filter: grayscale(100%);
+    border: #ffda61 solid;
+    cursor: url('cursor-pointer.png'), auto;
+}
+
+img:hover {
+    filter: grayscale(0%)
+}
+
+.abtn {
+    text-decoration: none;
+    color: aliceblue;
+    background: #6e7a7e;
+    transition: 1s;
+    cursor: url('cursor-pointer.png'), auto;
+}
+
+.abtn:hover {
+    color: rgb(0, 0, 0);
+    background: #ffda61;
+}

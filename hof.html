@@ -1,0 +1,333 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hall of Fame</title>
+        <link rel="stylesheet" href="navbar1.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #deeeff;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    cursor: url('cursor-legit.png'), auto;
+    
+}
+.container
+{
+    width: 1000px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.1);
+    border-radius: 20px;
+    height: 100000px;
+    margin-top: 200px;
+}
+.tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgba(229,229,229);
+    position: relative;
+}
+.tab_box .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: #919191;
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.tab_box .tab_btn.active{
+    color: #7360ff;
+}
+
+.content_box{
+    padding: 20px;
+}
+
+.content_box .content{
+    display: none;
+}
+.content_box .content h2{
+    margin-bottom: 10px;
+}
+
+.line{
+    position: absolute;
+    top: 62px;
+    left: 0%;
+    width: 90px;
+    height: 5px;
+    background-color: #7360ff;
+    border-radius: 10px;
+}
+
+img{
+    width: 500px;
+    height: auto;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">Diamond</h2>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html" class="active button dropdown">Home</a></li>
+                    <li><a href="profiles.html" class="button">Profiles</a></li>
+                    <li><a href="hof.html" class="button">Hall of Fame</a></li>
+                    <li><a href="Guess that diamond.html" class="button">Games</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="tab_box">
+                <button class="tab_btn">Class Achievements</button>
+                <button class="tab_btn">Individual</button>
+                <button class="tab_btn">Academics</button>
+                <div class="line"></div>
+            </div>
+            <div class="content active" data-tab="Class Achievements">
+                <h3>Achievements Inside Sci-hi</h3>
+                <ol>
+                    <li>Best Female Costume in Character Parade</li>
+                    <img src="came.png">
+                    <li>1st Place in SWIPES implementers</li>
+                    <li></li>
+                </ol>
+            </div>
+        
+            <div class="content" data-tab="Individual">
+                <h3>Individual</h3>
+                <p>National ASMEPPS Qualifiers</p>
+                <ol>
+                    <li>Del Rosario, Enoch Josh</li>
+                    <img src="6.png">
+                    <li>Domingo, Benedict</li>
+                    <img src="12.png">
+                    <li>Parungao, Nathaniel James</li>
+                    <img src="9.png">
+                    <li>Ramos, Russel Syrius</li>
+                    <img src="rasel.png">
+                    <li>Sanopo, Sean Maurice</li>
+                    <img src="11.png">
+                    <li>Manlusoc, Mary Rizaleen</li>
+                    <img src="1.png">
+                </ol>
+
+                <p>Wins in School Press Conference</p>
+                <ol>
+                    <li>Manlusoc, Mary Rizaleen</li>
+                    <img src="1.png">
+                    <li>Zamora, Kyle Angelo</li>
+                    <img src="2.png">
+                    <li>Dela Cruz, Jeira Ayessa</li>
+                    <img src="3.png">
+                    <li>De Leon, Jurist Anne</li>
+                    <img src="4.png">
+                    <li>Victoria, Mavis Yuanne</li>
+                    <img src="5.png">
+                    <li>Del Rosario, Enoch Josh</li>
+                    <img src="6.png">
+                    <li>Dasion, Keziah Zabel</li>
+                    <img src="7.png">
+                    <li>Cabanig, Alexa Denise</li>
+                    <img src="8.png">
+                    <li>Santos, Steven James</li>
+                    <img src="10.png">
+                    <li>Sanopo, Sean Maurice</li>
+                    <img src="11.png">
+                    <li>Domingo, Benedict</li>
+                    <img src="12.png">
+                    
+                </ol>
+            </div>
+
+            <div class="content" data-tab="Academics">
+                <h3>Academics</h3>
+                <p>First Quarter</p>
+                <ol>
+                    <li>Del Rosario, Enoch Josh</li>
+                    <img src="13.png">
+                    <li>Domingo, Benedict</li>
+                    <img src="14.png">
+                    <li>Dysangco, Jose Alexis Dominic</li>
+                    <img src="15.png">
+                    <li>Gonzales, Hanns David</li>
+                    <img src="16.png">
+                    <li>Parungao, Nathaniel James</li>
+                    <img src="17.png">
+                    <li>Quiros, Renz Benedict</li>
+                    <img src="18.png">
+                    <li>Ramos, Russel Syrius</li>
+                    <img src="19.png">
+                    <li>Sanopo, Sean Maurice</li>
+                    <img src="20.png">
+                    <li>Zamora, Kyle Angelo</li>
+                    <img src="21.png">
+                    <li>Cabanig, Alexa Denise</li>
+                    <img src="22.png">
+                    <li>Dasion, Keziah Zabel</li>
+                    <img src="23.png">
+                    <li>De Leon, Jurist Anne</li>
+                    <img src="24.png">
+                    <li>Manlusoc, Mary Rizaleen</li>
+                    <img src="25.png">
+                    <li>Victoria, Mavis Yuanne</li>
+                    <img src="26.png">
+                    
+                </ol>
+
+                <p>Second Quarter</p>
+                <ol>
+                    <li>Antopina, John Seong Tae</li>
+                    <img src="st.png">
+                    <li>Del Rosario, Enoch Josh</li>
+                    <img src="13.png">
+                    <li>Domingo, Benedict</li>
+                    <img src="14.png">
+                    <li>Dysangco, Jose Alexis Dominic</li>
+                    <img src="15.png">
+                    <li>Gonzales, Hanns David</li>
+                    <img src="16.png">
+                    <li>Parungao, Nathaniel James</li>
+                    <img src="17.png">
+                    <li>Quiros, Renz Benedict</li>
+                    <img src="18.png">
+                    <li>Ramos, Russel Syrius</li>
+                    <img src="19.png">
+                    <li>Tolentino, Arison Lanz</li>
+                    <img src="al.png">
+                    <li>Sanopo, Sean Maurice</li>
+                    <img src="20.png">
+                    <li>Zamora, Kyle Angelo</li>
+                    <img src="21.png">
+                    <li>Abiog, Jasmine Elaine</li>
+                    <img src="je.png">
+                    <li>Cabanig, Alexa Denise</li>
+                    <img src="22.png">
+                    <li>Dasion, Keziah Zabel</li>
+                    <img src="23.png">
+                    <li>De Leon, Jurist Anne</li>
+                    <img src="24.png">
+                    <li>Liwag, Christa Shyra</li>
+                    <img src="cs.png">
+                    <li>Manlusoc, Mary Rizaleen</li>
+                    <img src="25.png">
+                    <li>Sangoyo, Klaude Monet</li>
+                    <img src="km.png">
+                    <li>Victoria, Mavis Yuanne</li>
+                    <img src="26.png">
+                    
+                </ol>
+            </div>
+
+            <footer class="footer">
+                <div class="fcontainer">
+                    <div class="row">
+                        <div class="footer-col">
+                            <h4>Jian and Nathan</h4>
+                            <ul>
+                                <li> <a href="aboutus.html">About us</a></li>
+                                <li> <a href="os.html">Our Services</a></li>
+                                <li> <a href="pp.html">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer-col">
+                            <h4>Get Help</h4>
+                            <ul>
+                                <li> <a href="ci.html">Contact Info</a></li>
+                                <li> <a href="ea.html">Email Adress</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer-col">
+                            <h4>Sources</h4>
+                            <ul>
+                                <li> <a href="https://www.facebook.com/seanmaurice.sanopo">Games</a></li>
+                                <li> <a href="https://www.youtube.com/watch?v=kmM6mqvnxcs">Parallax</a></li>
+                                <li> <a href="https://www.youtube.com/watch?v=YOb67OKw62s">Footer</a></li>
+                                <li> <a href="https://www.youtube.com/watch?v=F7iFnhSZe7o">Buttons</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer-col">
+                            <h4>Follow us</h4>
+                            <div class="social-links">
+                                <p style="color: #fff;">Jian</p>
+                                <a href="https://www.facebook.com/juristanne.deleon.16?mibextid=kFxxJD"><i class="fab fa-facebook-f"></i></a>
+                                <a href="none.html"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/anngeljian/?igsh=Z3JxMDJoYTJrZ2oz&utm_source=qr&fbclid=IwAR0UfBvS2qBAVODZPgBdnJa-01xqU92QdY3qiqzAq1HVw2XGRcPSa7X128E"><i class="fab fa-instagram"></i></a>
+                                <a href="none.html"><i class="fab fa-linkedin-in"></i></a>
+            
+                                <p style="color: #fff;">Nathan</p>
+                                <a href="https://www.facebook.com/nathan.jimenezparungao"><i class="fab fa-facebook-f"></i></a>
+                                <a href="none.html"><i class="fab fa-twitter"></i></a>
+                                <a href="none.html"><i class="fab fa-instagram"></i></a>
+                                <a href="none.html"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+<script>
+    const tabs = document.querySelectorAll('.tab_btn');
+    const all_content = document.querySelectorAll('.content');
+    const line = document.querySelector('.line');
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', (e) => {
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tab.classList.add('active');
+            line.style.width = e.target.offsetWidth + "px";
+            line.style.left = e.target.offsetLeft + "px";
+      
+            all_content.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            const contentToShow = document.querySelector('.content[data-tab="' + tab.innerText + '"]');     
+            if (contentToShow) {
+                contentToShow.style.display = 'block';
+            }
+        });
+    });
+
+    const buttons = document.querySelectorAll(".button");
+
+for (let button of buttons) {
+    console.log('reached');
+    button.addEventListener("click", e => {
+        e.preventDefault();
+        button.classList.add("animate");
+
+        setTimeout(() => {
+            button.classList.remove("animate");
+            window.location.href = button.getAttribute("href");
+        }, 600);
+    });
+}
+    
+</script>
+
+
+    </body>
+</html>

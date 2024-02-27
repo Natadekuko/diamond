@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Go!</title>
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Pokemond</h2>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#" class="active button dropdown">Home</a></li>
+                <li><a href="profiles.html" class="button">Profiles</a></li>
+                <li><a href="#" class="button">Events</a></li>
+                <li><a href="#" class="button">Hall of Fame</a></li>
+                <li><a href="Guess that diamond.html" class="button">Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const buttonElements = document.querySelectorAll(".button");
+    
+    for(let button of buttonElements) {
+        console.log('reached');
+        button.addEventListener("click", e => {
+            e.preventDefault();
+            button.classList.add("animate");
+    
+            setTimeout(() => {
+                button.classList.remove("animate");
+            }, 600);
+        });
+    }
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <style>
+        
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #03080a;
+    }
+
+    .container{
+        width: 80%;
+        padding: 20px;
+    }
+
+    .container h2{
+        width: 100%;
+        color: #45f3ff;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .container .row100{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+
+    .container .row100 .col{
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px 0 30px;
+        transition: .5s;
+    }
+
+    .container .row100 .inputBox{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        color: #45f3ff;
+    }
+
+    .container .row100 .inputBox input,
+    .container .row100 .inputBox .textarea textarea{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 0 10px;
+        z-index: 1;
+        color: #000;
+    }
+
+    .container .row100 .inputBox .text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        display: block;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+
+    .container .row100 .inputBox input:focus + .text,
+    .container .row100 .inputBox input:valid + .text,
+    .container .row100 .inputBox .textarea textarea:focus + .text,
+    .container .row100 .inputBox .textarea textarea:valid + .text {
+        top: -35px;
+        left: -10px;
+    }
+
+    .container .row100 .inputBox .line{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #45f3ff;
+        transition: 0.5s;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+
+    .container .row100 .inputBox input:focus ~ .line,
+    .container .row100 .inputBox input:valid ~ .line,
+    .container .row100 .inputBox .textarea textarea:focus ~ .line,
+    .container .row100 .inputBox .textarea textarea:valid ~ .line {
+        height: 100%;
+    }
+
+    .container .row100 .inputBox .textarea{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding: 10px 0;
+    }
+
+    .container .row100 .inputBox .textarea textarea{
+        height: 100%;
+        resize: none;
+        width: calc(100% - 20px);
+    }
+
+    #start{
+        align-items: center;
+        justify-content: center;
+        border: #45f3ff solid;
+        border-radius: 2px;
+        background: #0a171d;
+        color: #45f3ff;
+        padding: 20px 50px;
+        transition: 1s ease;
+        font-family: serif;
+        
+    }
+
+    #start:hover{
+        background: #45f3ff;
+        color: #0a171d;
+    }
+
+    #submit{
+        align-items: center;
+        justify-content: center;
+        border: #45f3ff solid;
+        border-radius: 2px;
+        background: #0a171d;
+        color: #45f3ff;
+        padding: 20px 50px;
+        transition: 1s ease;
+        font-family: serif;
+        
+    }
+
+    #submit:hover{
+        background: #45f3ff;
+        color: #0a171d;
+    }
+
+    *{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    justify-content: center ;
+    align-items: center;
+    height: 46px;
+    padding: 0 10px;
+    float: left;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #45f3ff;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #45f3ff;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #45f3ff;
+}
+</style>
+
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Survey</h2>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q1">
+                    <span class="text">Do you think this map is educational?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q2">
+                    <span class="text">Are the graphics aesthetically appealing?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q3">
+                    <span class="text">Do you think this website contains enough information for each country? </span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q4">
+                    <span class="text">Do you think this website is useful for traveling?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q5">
+                    <span class="text">How well does our website meet your needs?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q6">
+                    <span class="text">Does this website interest you to go to these places?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q7">
+                    <span class="text">Is the graphics in the map placed correctly in your screen?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q8">
+                    <span class="text">Is the information provided on our website accurate?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q9">
+                    <span class="text">What are some issues that you've encountered with the map?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q10">
+                    <span class="text">How did this/these issues affect you experience?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="q11">
+                    <span class="text">What do you think we should do to prevent these issues?</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            
+        </div>
+        <center>
+            <div class="rate">
+            <font color="#45f3ff">Rate our Map!</font>
+            <br>
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="text">1 star</label>
+          </div>
+        </center>
+        <div class="row100">
+            <div class="col">
+                <center><a href="ty.html"><input type="submit" id="submit" onclick="submit()"></a></center>
+            </div>
+        </div>
+    </div>
+    <script>
+        function submit(){
+
+        
+        let one = document.getElementById("q1").value
+        let two = document.getElementById("q2").value
+        let three = document.getElementById("q3").value
+        let four = document.getElementById("q4").value
+        let five = document.getElementById("q5").value
+        let six = document.getElementById("q6").value
+        let seven = document.getElementById("q7").value
+        let eight = document.getElementById("q8").value
+        let nine = document.getElementById("q9").value
+        let ten = document.getElementById("q10").value
+        let eleven = document.getElementById("q11").value
+
+        let s1 = document.getElementById("star1").value
+        let s2 = document.getElementById("star2").value
+        let s3 = document.getElementById("star3").value
+        let s4 = document.getElementById("star4").value
+        let s5 = document.getElementById("star5").value
+
+        localStorage.setItem("rate", s1)
+        localStorage.setItem("rate", s2)
+        localStorage.setItem("rate", s3)
+        localStorage.setItem("rate", s4)
+        localStorage.setItem("rate", s5)
+
+        localStorage.setItem("q1", one)
+        localStorage.setItem("q2", two)
+        localStorage.setItem("q3", three)
+        localStorage.setItem("q4", four)
+        localStorage.setItem("q5", five)
+        localStorage.setItem("q6", six)
+        localStorage.setItem("q7", seven)
+        localStorage.setItem("q8", eight)
+        localStorage.setItem("q9", nine)
+        localStorage.setItem("q10", ten)
+        localStorage.setItem("q11", eleven)
+        }
+    </script>
+</body>
+</html>

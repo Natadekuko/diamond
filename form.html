@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #03080a;
+    }
+
+    .container{
+        width: 80%;
+        padding: 20px;
+    }
+
+    .container h2{
+        width: 100%;
+        color: #45f3ff;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .container .row100{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    }
+
+    .container .row100 .col{
+        position: relative;
+        width: 100%;
+        padding: 0 10px;
+        margin: 30px 0 30px;
+        transition: .5s;
+    }
+
+    .container .row100 .inputBox{
+        position: relative;
+        width: 100%;
+        height: 40px;
+        color: #45f3ff;
+    }
+
+    .container .row100 .inputBox input,
+    .container .row100 .inputBox .textarea textarea{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding: 0 10px;
+        z-index: 1;
+        color: #000;
+    }
+
+    .container .row100 .inputBox .text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 40px;
+        font-size: 18px;
+        padding: 0 10px;
+        display: block;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+
+    .container .row100 .inputBox input:focus + .text,
+    .container .row100 .inputBox input:valid + .text,
+    .container .row100 .inputBox .textarea textarea:focus + .text,
+    .container .row100 .inputBox .textarea textarea:valid + .text {
+        top: -35px;
+        left: -10px;
+    }
+
+    .container .row100 .inputBox .line{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #45f3ff;
+        transition: 0.5s;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+
+    .container .row100 .inputBox input:focus ~ .line,
+    .container .row100 .inputBox input:valid ~ .line,
+    .container .row100 .inputBox .textarea textarea:focus ~ .line,
+    .container .row100 .inputBox .textarea textarea:valid ~ .line {
+        height: 100%;
+    }
+
+    .container .row100 .inputBox .textarea{
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding: 10px 0;
+    }
+
+    .container .row100 .inputBox .textarea textarea{
+        height: 100%;
+        resize: none;
+        width: calc(100% - 20px);
+    }
+
+    #submit{
+        align-items: center;
+        justify-content: center;
+        border: #45f3ff solid;
+        border-radius: 2px;
+        background: #0a171d;
+        color: #45f3ff;
+        padding: 20px 50px;
+        transition: 1s ease;
+        font-family: serif;
+        
+    }
+
+    #submit:hover{
+        background: #45f3ff;
+        color: #0a171d;
+    }
+
+    #submit:active{
+        opacity: .5;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pre-Survey</h2>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="name">
+                    <span class="text">First Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="surname">
+                    <span class="text">Last Name</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+                <div class="inputBox">
+                    <input type="text" required="required" id="email">
+                    <span class="text">Email</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="inputBox">
+                    <input type="number" required="required" id="mobile">
+                    <span class="text">Mobile</span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row100">
+            <div class="col">
+                <center><a href="main.html"><input type="submit" id="submit" onclick="submit()"></a></center>
+            </div>
+        </div>
+    </div>
+    <script>
+        function submit(){
+        let one = document.getElementById("name").value
+        let two = document.getElementById("surname").value
+        let three = document.getElementById("email").value
+        let four = document.getElementById("mobile").value
+
+        localStorage.setItem("name", one)
+        localStorage.setItem("surname", two)
+        localStorage.setItem("email", three)
+        localStorage.setItem("mobile", four)
+        }
+    </script>
+</body>
+</html>

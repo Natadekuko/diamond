@@ -1,139 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diamond Go!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="cursor.css">
-    
-
     <style>
-        body{
-            cursor: url('cursor-legit.png'), auto;
+        /* Your existing styles */
+        body {
+            background: url(bgImg.jpg);
+            background-size: 100% auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        #bgImg {
+            width: 100%;
+            height: auto;
+            z-index: -1000;
+        }
+
+        .imgPin {
+            width: 10%;
+            height: 20%;
+            position: relative;
+            transition: transform 1s ease; /* Adding transition effect */
+        }
+
+        
+
+        /* Define the hover effect */
+        .imgPin:hover {
+            transform: scale(1.1); /* Scale the image on hover */
+        }
+
+        /* Your existing styles */
+        .layerOne {
+            margin-top: 100px;
+            z-index: 1000;
+        }
+
+        .layerTwo {
+            z-index: 1500;
+        }
+
+        .layerThree {
+            z-index: 2000;
+        }
+
+        .layerFive {
+            z-index: 3000;
+        }
+
+        .layerFour {
+            z-index: 2500;
+        }
+
+        #oneImg {
+            z-index: 1000;
+            margin-left: 70px;
+        }
+
+        #twoImg {
+            z-index: 1000;
+            margin-left: 30px;
+        }
+
+        #threeImg {
+            z-index: 1000;
+            margin-left: 63px;
+            top: -30px;
+        }
+
+        #sevenImg {
+            margin-left: 170px;
+            top: -40px;
+            z-index: 1500;
+        }
+
+        #fiveImg {
+            margin-left: 260px;
+            top: -100px;
+        }
+
+        #fourImg {
+            margin-left: 200px;
+            top: -70px;
+        }
+
+        #eightImg {
+            margin-left: 475px;
+            top: -210px;
+        }
+
+        #sixImg {
+            margin-left: 268px;
+            top: -290px;
+        }
+
+        #nineImg {
+            margin-left: 755px;
+            top: -545px;
+        }
+
+        #tenImg {
+            margin-left: 350px;
+            top: -370px;
+        }
+
+        
+        #spawnedDiv {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            border-radius: 10%;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            z-index: 5000;
+        }
+
+        #rate{
+            width: auto;
+            height: 300px;
+            z-index: 5000;
+        }
+
+        #ftbe{
+            position: relative;
+            top: -600px;
+            z-index: 5000;
+        }
+
+        #ftbe:hover{
+            cursor: pointer;
         }
     </style>
 </head>
-
 <body>
-    
-    <div class="header">
-        <h2 class="logo"><img src="HCPSMSHS’s 8-Diamond.png" alt="png" id="jian"></h2>
-        <nav class="navigation">
-            <ul>
-                <li><a href="index.html" class="active button dropdown">Home</a></li>
-                <li><a href="profiles.html" class="button">Profiles</a></li>
-                <li><a href="hof.html" class="button">Hall of Fame</a></li>
-                <li class="dropdown">
-                    <a href="games.html" class="button">Games</a>
-                    <ul>
-                        <li><a href="Guess that diamond.html">Guess that Diamond</a></li>
-                        <li><a href="dmg.html">Diamond Memory Game</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
+<a onclick="one()"><img src="1.png" alt="img" id="oneImg" class="layerOne imgPin"></a>
+<a onclick="two()"><img src="2.png" alt="img" id="twoImg" class="layerOne imgPin"></a>
+<br>
+<a onclick="seven()"><img src="7.png" alt="img" id="sevenImg" class="layerTwo imgPin"></a>
+<a onclick="three()"><img src="3.png" alt="img" id="threeImg" class="layerTwo imgPin"></a>
+<br>
+<a onclick="five()"><img src="5.png" alt="img" id="fiveImg" class="layerThree imgPin"></a>
+<br>
+<a onclick="four()"><img src="4.png" alt="img" id="fourImg" class="layerFour imgPin"></a>
+<br>
+<a onclick="eight()"><img src="8.png" alt="img" id="eightImg" class="layerFour imgPin"></a>
+<br>
+<a onclick="six()"><img src="6.png" alt="img" id="sixImg" class="layerFive imgPin"></a>
+<br>
+<a onclick="nine()"><img src="9.png" alt="img" id="nineImg" class="layerFive imgPin"></a>
+<br>
+<a onclick="ten()"><img src="10.png" alt="img" id="tenImg" class="layerFive imgPin"></a>
 
-<section>
-    <img src="stars.png" id="stars">
-    <h2 id="text">Diamond</h2>
-    <a href="#sec" id="btn">Go!</a>
-    <img src="diamond.png" id="diamond"> 
-   
-     
-    
 
-</section>
-<div class="sec" id="sec">
-    <h2>8-Diamond</h2>
-    <img src="diapic.jpg" height="800 px" width="1300px">
+<div id="spawnedDiv" style="display: none;">
+<center><a href="form.html"><img src="rate us.png" alt="png" id="rate"></a></center>
 </div>
-   
-<footer class="footer">
-    <div class="fcontainer">
-        <div class="row">
-            <div class="footer-col">
-                <h4>Jian and Nathan</h4>
-                <ul>
-                    <li> <a href="aboutus.html">About us</a></li>
-                    <li> <a href="os.html">Our Services</a></li>
-                    <li> <a href="pp.html">Privacy Policy</a></li>
-                </ul>
-            </div>
 
-            <div class="footer-col">
-                <h4>Get Help</h4>
-                <ul>
-                    <li> <a href="ci.html">Contact Info</a></li>
-                    <li> <a href="ea.html">Email Adress</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Sources</h4>
-                <ul>
-                    <li> <a href="https://www.facebook.com/seanmaurice.sanopo">Games</a></li>
-                    <li> <a href="https://www.youtube.com/watch?v=kmM6mqvnxcs">Parallax</a></li>
-                    <li> <a href="https://www.youtube.com/watch?v=YOb67OKw62s">Footer</a></li>
-                    <li> <a href="https://www.youtube.com/watch?v=F7iFnhSZe7o">Buttons</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Follow us</h4>
-                <div class="social-links">
-                    <p style="color: #fff;">Jian</p>
-                    <a href="https://www.facebook.com/juristanne.deleon.16?mibextid=kFxxJD"><i class="fab fa-facebook-f"></i></a>
-                    <a href="none.html"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/anngeljian/?igsh=Z3JxMDJoYTJrZ2oz&utm_source=qr&fbclid=IwAR0UfBvS2qBAVODZPgBdnJa-01xqU92QdY3qiqzAq1HVw2XGRcPSa7X128E"><i class="fab fa-instagram"></i></a>
-                    <a href="none.html"><i class="fab fa-linkedin-in"></i></a>
-
-                    <p style="color: #fff;">Nathan</p>
-                    <a href="https://www.facebook.com/nathan.jimenezparungao"><i class="fab fa-facebook-f"></i></a>
-                    <a href="none.html"><i class="fab fa-twitter"></i></a>
-                    <a href="none.html"><i class="fab fa-instagram"></i></a>
-                    <a href="none.html"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
+<div id="ftbe">
+    <center><img src="ftbe.png" alt="png" id="ftbe" onclick="disappear()"></center>
     </div>
-</footer>
 
 <script>
-    let stars = document.getElementById('stars');
-    let diamond = document.getElementById('diamond');
-    let btn = document.getElementById('btn');
-    let text = document.getElementById('text');
+    function disappear(){
+        let ftbe = document.getElementById("ftbe");
+        ftbe.style.display = "none";
+    }
 
-    window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-    stars.style.left = value + 0.25 + 'px';
-   
-    text.style.marginRight = value + 4 + 'px';
-    }) 
+    let oneImg = document.getElementById("oneImg")
+    let twoImg = document.getElementById("twoImg")
+    let threeImg = document.getElementById("threeImg")
+    let fourImg = document.getElementById("fourImg")
+    let fiveImg = document.getElementById("fiveImg")
+    let sixImg = document.getElementById("sixImg")
+    let sevenImg = document.getElementById("sevenImg")
+    let eighImg = document.getElementById("eightImg")
+    let nineImg = document.getElementById("nineImg")
+    let tenImg = document.getElementById("tenImg")
 
-    const buttons = document.querySelectorAll(".button");
+    oneImg.addEventListener("mouseover", function(){
+        document.getElementById("oneImg").src = "11.png"
+    })
 
-for (let button of buttons) {
-    console.log('reached');
-    button.addEventListener("click", e => {
-        e.preventDefault();
-        button.classList.add("animate");
+    twoImg.addEventListener("mouseover", function(){
+        document.getElementById("twoImg").src = "12.png"
+    })
 
-        setTimeout(() => {
-            button.classList.remove("animate");
-            window.location.href = button.getAttribute("href");
-        }, 600);
-    });
-}
-        ;</script>
+    threeImg.addEventListener("mouseover", function(){
+        document.getElementById("threeImg").src = "13.png"
+    })
+
+    fourImg.addEventListener("mouseover", function(){
+        document.getElementById("fourImg").src = "14.png"
+    })
+
+    fiveImg.addEventListener("mouseover", function(){
+        document.getElementById("fiveImg").src = "15.png"
+    })
+
+    sixImg.addEventListener("mouseover", function(){
+        document.getElementById("sixImg").src = "16.png"
+    })
+
+    sevenImg.addEventListener("mouseover", function(){
+        document.getElementById("sevenImg").src = "17.png"
+    })
+
+    eightImg.addEventListener("mouseover", function(){
+        document.getElementById("eightImg").src = "18.png"
+    })
+
+    nineImg.addEventListener("mouseover", function(){
+        document.getElementById("nineImg").src = "19.png"
+    })
+
+    tenImg.addEventListener("mouseover", function(){
+        document.getElementById("tenImg").src = "20.png"
+    })
+    
+    
+    function one() {
+        alert("Myanmar is located in the western portion of mainland Southeast Asia and is bordered by China to the north and northeast, Laos to the east, Thailand to the southeast, the Andaman Sea and Bay of Bengal to the south and southwest, Bangladesh to the west, and India to the northwest.")
+        
+        }
+
+    function two() {
+        alert("Laos is a landlocked country located in Southeast Asia bordered by Burma, Cambodia, China, Thailand, and Vietnam. Most of the country is mountainous and thickly forested, and the Mekong River forms a large part of the western boundary with Thailand.")
+    
+        }
+
+    function three() {
+        alert("Vietnam, a strip of land shaped like the letter “S”, lies on the eastern part of the Indochinese peninsula. It is bordered by China in the north, Laos and Cambodia to the west, the East Sea to the east and the Pacific Ocean to the east and south.")
+    
+        }
+
+    function four() {
+        alert("Malaysia is a federation of 13 states and three federal territories in Southeast Asia. It consists of two regions separated by the South China Sea and is bordered by Brunei, Indonesia, and Thailand. Malaysia has a strategic location along the Strait of Malacca and the southern South China Sea.")
+    
+        }
+        
+    function five() {
+        alert("Cambodia is a country in Southeast Asia that borders the Gulf of Thailand. Neighboring countries include Laos, Thailand, and Vietnam. The geography of Cambodia is mountainous in the southwest and north and is dominated by the Mekong River and Tonle Sap Lake.")
+    
+        }
+
+    function six() {
+        alert("Singapore is a sunny, tropical island in Southeast Asia, off the southern tip of the Malay Peninsula. It is about 275 square miles, smaller than the State of Rhode Island, and inhabited by over five million people, of which the resident population comprises four major communities; Chinese, Malay, Indian and Eurasian.Laos is a landlocked country located in Southeast Asia bordered by Burma, Cambodia, China, Thailand, and Vietnam. Most of the country is mountainous and thickly forested, and the Mekong River forms a large part of the western boundary with Thailand.")
+    
+        }
+
+    function seven() {
+        alert("Thailand is situated in the heart of Southeast Asia, bordered by the Laos and Cambodia in the east; the Gulf of Thailand and Malaysia in the south; the Andaman Sea and Myanmar in the west; and Laos and Myanmar in the north. It is spread over 513,120 sq km.")
+    
+        }
+
+    function eight() {
+        alert("Brunei is a country located in Southeast Asia on the island of Borneo. Aside from the South China Sea coastline, it is surrounded by Malaysia. The coastal position puts Brunei close to vital sea lanes linking the Indian and Pacific Oceans. Brunei is mostly flat with mountains in the east.")
+    
+        }
+
+    function nine() {
+        alert("Philippines, island country of Southeast Asia in the western Pacific Ocean. It is an archipelago consisting of more than 7,000 islands and islets lying about 500 miles (800 km) off the coast of Vietnam. Manila is the capital, but nearby Quezon City is the country's most-populous city.")
+    
+        }
+
+    function ten() {
+        alert("Indonesia is the largest country in Southeast Asia, with a maximum dimension from east to west of about 3,200 miles (5,100 km) and an extent from north to south of 1,100 miles (1,800 km). It shares a border with Malaysia in the northern part of Borneo and with Papua New Guinea in the centre of New Guinea.")
+    
+        }
+
+
+    oneImg.addEventListener("mouseout", function() {
+        oneImg.src = "1.png";
+    })
+
+    twoImg.addEventListener("mouseout", function() {
+        twoImg.src = "2.png";
+    })
+
+    threeImg.addEventListener("mouseout", function() {
+        threeImg.src = "3.png";
+    })
+    
+    fourImg.addEventListener("mouseout", function() {
+        fourImg.src = "4.png";
+    })
+
+    fiveImg.addEventListener("mouseout", function() {
+        fiveImg.src = "5.png";
+    })
+
+    sixImg.addEventListener("mouseout", function() {
+        sixImg.src = "6.png";
+    })
+
+    sevenImg.addEventListener("mouseout", function() {
+        sevenImg.src = "7.png";
+    })
+
+    eightImg.addEventListener("mouseout", function() {
+        eightImg.src = "8.png";
+    })
+
+    nineImg.addEventListener("mouseout", function() {
+        nineImg.src = "9.png";
+    })
+
+    tenImg.addEventListener("mouseout", function() {
+        tenImg.src = "10.png";
+    })
+
+    // Function to spawn div after 1 minute
+    function spawnDiv() {
+        let spawnedDiv = document.getElementById("spawnedDiv");
+        spawnedDiv.style.display = "block";
+        spawnedDiv.style.position = "absolute";
+        spawnedDiv.style.top = "50%";
+        spawnedDiv.style.left = "50%";
+        spawnedDiv.style.transform = "translate(-50%, -50%)";
+    }
+
+    // Call spawnDiv function after 1 minute
+    setTimeout(spawnDiv, 30000); // 60000 milliseconds = 1 minute
+</script>
 </body>
-
 </html>
